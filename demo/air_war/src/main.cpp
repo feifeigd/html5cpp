@@ -14,11 +14,11 @@ using namespace client;
 
 Game* gameInstance;
 
-void func();
+void func();	// 库的声明
 
 void loadCallback()
 {
-	func();
+	func();	// 测试调用自定义库代码
 	gameInstance = new Game;
 	console.log("loadCallback!");
 }

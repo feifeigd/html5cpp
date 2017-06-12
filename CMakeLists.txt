@@ -32,5 +32,5 @@ set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -g -cheerp-pretty-code")
 
 add_subdirectory(html5cpp-lib)
 
-add_subdirectory(demo/hello_world)
+add_subdirectory(demo/air_war)
 

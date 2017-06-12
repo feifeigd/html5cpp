@@ -1,5 +1,7 @@
-#include <cstdio>
+#include <cheerp/clientlib.h>
+
+using namespace client;
 
 void func(){
-	puts("func:hello world");
+	console.log("func:hello world");
 }
