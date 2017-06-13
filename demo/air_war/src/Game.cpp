@@ -7,6 +7,7 @@
 Game::Game(){
 	//初始化引擎，设置游戏设计宽高
 	_G.init(480, 852);
+	_G.alertGlobalError(true);
 	showApe();
 }
 
