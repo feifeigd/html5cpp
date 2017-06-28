@@ -1,5 +1,8 @@
 ﻿#pragma once
 
+#include "Bitmap.h"
+#include "Context.h"
+
 namespace engine{
 	namespace resource{
 

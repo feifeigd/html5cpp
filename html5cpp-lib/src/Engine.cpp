@@ -1,6 +1,7 @@
 ﻿#include <engine.core.h>
 
 using engine::utils::Browser;
+using engine::renders::Render;
 
 Engine::Engine()
 	: is3DMode(false)
@@ -15,7 +16,7 @@ Engine& Engine::instance(){
 }
 
 void Engine::alertGlobalError(bool value){
-	//if(value)
+	if(value){
 	__asm__(
 		"var erralert=0;"		
 		"window.onerror=function (msg,url,line,column,detail){"
@@ -23,12 +24,13 @@ void Engine::alertGlobalError(bool value){
 				"alert(\"出错啦，请把此信息截图给研发商\\n\"+msg+\"\\n\"+detail.stack);"
 		"}"
 		);
-	//else __asm__("window.onerror=null");
+	}else{ __asm__("window.onerror=null");}
 }
 
 void Engine::init(short width, short height){
 	Browser::__init__();
 	//Font::__init__();
+	_G.render = new Render(width, height);
 }
 
 void Engine::initAsyn(){

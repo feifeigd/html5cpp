@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#include "../events/EventDispatcher.h"
+
 namespace engine{
 	namespace resource{
 

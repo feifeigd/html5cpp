@@ -17,7 +17,7 @@ public:
 	/**加载管理器*/
 	engine::net::LoaderManager loader;
 	/**Render类*/
-	engine::renders::Render render;
+	engine::renders::Render* render;
 	/**引擎版本*/
 	std::string version;
 	/**是否是3d模式*/
