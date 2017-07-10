@@ -16,15 +16,25 @@ Game* gameInstance;
 
 void func();	// 库的声明
 
-void loadCallback()
+void loadCallback(int a)
 {
 	func();	// 测试调用自定义库代码
 	gameInstance = new Game;
-	console.log("loadCallback!");
+	console.log("loadCallback!", a);
+	//console.log("b=", b[0]);
 }
 
-void webMain(){
+class A{
+public:
+	String const& str;
+	int b;
+	A(String const& s, int b): str(s){this->b = b;}
+};
+
+void webMain(){	
+	A c("fffffff", 888888888);
 	console.log("Hello World Wide Web!");
+	console.log(c.str, c.b);
 	//char buf[256];
 	//sprintf(buf, "%s=%d", "aaaaaaaa", 666);
 	//puts(buf);
