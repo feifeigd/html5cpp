@@ -9,8 +9,6 @@ Object* Color::_COLOR_MAP = nullptr; //{"white":'#FFFFFF',"red":'#FF0000',"green
 //Object* Color::_DEFAULT = Color::_initDefault();
 int Color::_COLODID = 1;
 
-#define ArrayCount(a) (sizeof a/ sizeof a[0])
-
 void Color::initColorMap(){
 	if(Color::_COLOR_MAP)return;
 	Color::_COLOR_MAP = new Object;
